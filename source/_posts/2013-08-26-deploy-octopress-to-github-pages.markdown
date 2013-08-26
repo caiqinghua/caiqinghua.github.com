@@ -9,7 +9,7 @@ tags: [octopress]
 
 ## 引子
 
-上一篇博客已经说了为什么要搭建这个博客系统，本文不在啰嗦，单刀直入，说以下主题。
+上一篇博客已经说了为什么要搭建这个博客系统，本文不再啰嗦，单刀直入，说以下主题。
 1. Octopress是什么
 2. Github Page是什么
 3. 部署Octopress到Github Pages的过程
@@ -144,14 +144,14 @@ git push origin source
 到github.com查看你上面新建的repository，会多一个source分支，记载所有的源文件。
 
 ### 安装过程中遇到的问题
-1. bundle install 过程中Installing rdiscount (2.0.7.3) 安装失败
+#### 1. bundle install 过程中Installing rdiscount (2.0.7.3) 安装失败
 
 猜测原因：DevKit问题
 把Ruby200中的DevKit删除，把path中c:\Ruby200\devkit 删除
 重新执行bundle install
 成功了
 
-2. rake install 错误
+#### 2. rake install 错误
 
 ```
 d:\ruby\octopress>rake install
@@ -166,7 +166,7 @@ gem 'rake', '~> 0.9'
 gem 'rake'
 再次rake install成功了
 
-3. rake setup_github_pages 'hellip' 不是内部或外部命令
+####　3. rake setup_github_pages 'hellip' 不是内部或外部命令
 
 ```
 d:\ruby\octopress>rake setup_github_pages
@@ -198,7 +198,7 @@ google: 'hellip' 不是内部或外部命令，也不是可运行的程序
 http://pythonee.github.io/blog/2012/08/10/how-to-octpress/
 这个错误无关痛痒，无需解决。
 
-4. rake deploy
+####　4. rake deploy
 
 ```
 ## Pushing generated _deploy website
@@ -210,7 +210,7 @@ and the repository exists.
 ```
 解决办法：设置ssh，前面已经提及
 
-5. 再次rake deploy，发生以下错误
+####　5. 再次rake deploy，发生以下错误
 
 ```
 ## Pushing generated _deploy website

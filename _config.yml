@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://caiqinghua.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://caiqinghua.github.com
+title: 技术分享控-蔡清华
+subtitle: 分享让我们拥有更多 改进让我们效率更高
+author: 蔡清华 caiqinghua@126.com
 simple_search: http://google.com/search
-description:
+description: 不分享不生活
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in

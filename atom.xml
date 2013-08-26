@@ -4,7 +4,7 @@
   <title><![CDATA[技术分享控-蔡清华]]></title>
   <link href="http://caiqinghua.github.com/atom.xml" rel="self"/>
   <link href="http://caiqinghua.github.com/"/>
-  <updated>2013-08-26T21:45:16+08:00</updated>
+  <updated>2013-08-27T00:16:30+08:00</updated>
   <id>http://caiqinghua.github.com/</id>
   <author>
     <name><![CDATA[蔡清华 caiqinghua@126.com]]></name>
@@ -12,6 +12,354 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[在github pages上部署octopress搭建个人博客系统]]></title>
+    <link href="http://caiqinghua.github.com/blog/2013/08/26/deploy-octopress-to-github-pages/"/>
+    <updated>2013-08-26T22:21:00+08:00</updated>
+    <id>http://caiqinghua.github.com/blog/2013/08/26/deploy-octopress-to-github-pages</id>
+    <content type="html"><![CDATA[<h2>引子</h2>
+
+<p>上一篇博客已经说了为什么要搭建这个博客系统，本文不在啰嗦，单刀直入，说以下主题。
+1. Octopress是什么
+2. Github Page是什么
+3. 部署Octopress到Github Pages的过程
+4. 部署中遇到的问题</p>
+
+<h2>理解本文的基本知识</h2>
+
+<ol>
+<li>windows命令行基本使用方法（运行中输入cmd，输入enter)</li>
+<li>git(学习资料: Pro Git 简体中文版，请自行google下载)</li>
+<li>github(github.com)</li>
+<li>ruby(本文只要会安装，会用几条命令即可)</li>
+</ol>
+
+
+<h2>什么是octopress?</h2>
+
+<p>自动化创建静态博客工具，包括一些模板和一些批处理工具。
+用ruby和sass实现的，作者imathis也是compass的作者，compass是什么不是本文的关注点，请读者自行google了解。</p>
+
+<h2>什么是github pages?</h2>
+
+<p>github静态页面，为项目做宣传主页之类的用处。</p>
+
+<h2>为什么部署到github pages?</h2>
+
+<p>github pages免费空间，免费流量，每次的博客改动和博客模板的改动都由git跟踪。没有理由不选择。</p>
+
+<h2>step by step 部署Octopress到Github Pages</h2>
+
+<h3>准备</h3>
+
+<p>系统：Windows 7</p>
+
+<p>Git：<a href="http://msysgit.googlecode.com/files/Git-1.8.1.2-preview20130201.exe">下载地址</a></p>
+
+<p>Ruby：<a href="http://rubyinstaller.org/news/2013/05/16/rubyinstaller-1-9-3-p429-released/">下载地址</a>
+<strong>注意</strong>: 部署octopress到github之前我已经安装过ruby on rails，所以我没有安装上面的ruby 1.9.3。
+我安装是<a href="http://rubyforge.org/frs/download.php/76862/railsinstaller-2.2.1.exe">railsinstaller-2.2.1</a>，详情请查看：<a href="http://railsinstaller.org/en">http://railsinstaller.org/en</a>
+所以下面的安装过程出很多问题也许和此有关，所以还是建议直接安装ruby 1.9.3，不要安装railsinstaller。</p>
+
+<p>DevKit：<a href="http://cloud.github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">下载地址</a></p>
+
+<p>Octopress：git://github.com/imathis/octopress.git</p>
+
+<h3>安装软件</h3>
+
+<p>安装Git
+Windows下安装Git很简单，一路next就可以了。</p>
+
+<p>安装Ruby
+Ruby的安装也是一路next就可以，不过记得勾选“Add Ruby executables to your PATH”，将Ruby的执行路径加入到环境变量中，如果忘记勾选，也可以手动设置。安装完后可以在命令提示符中输入ruby –version 来确认是否安装成功。</p>
+
+<p>安装DevKit
+DevKit下载下来的是一个自压缩文件，我们将其解压到D:/DevKit，有两点需要注意：</p>
+
+<ol>
+<li>解压目录中没有有中文和空格；</li>
+<li>必须先安装Ruby，而且Ruby需要是RubyInstallser安装。</li>
+</ol>
+
+
+<p>解压DevKit后，在命令行输入以下命令来进行安装：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /d D:\DevKit
+</span><span class='line'>ruby dk.rb init
+</span><span class='line'>ruby dk.rb install</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>用Git下载octopress源代码到本地</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /d D:\ruby
+</span><span class='line'>git clone git://github.com/imathis/octopress.git octopress</span></code></pre></td></tr></table></div></figure>
+
+
+<p>下载完成后会在D:\ruby文件中生成octopress文件夹，下面的操作都是基于这个文件夹。</p>
+
+<h3>安装Octopress依赖项</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd octopress
+</span><span class='line'>gem install bundler
+</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>安装octopress默认主题</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd octopress
+</span><span class='line'>$ rake install</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>创建第一篇博客</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake new_post["My first octopress blog"]</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>本地预览生成的博客系统和博客</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>打开浏览器访问 <a href="http://localhost:4000/%EF%BC%8C%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%B0%86%E5%91%88%E7%8E%B0%E5%9C%A8%E7%9C%BC%E5%89%8D%E3%80%82">http://localhost:4000/%EF%BC%8C%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%B0%86%E5%91%88%E7%8E%B0%E5%9C%A8%E7%9C%BC%E5%89%8D%E3%80%82</a></p>
+
+<p>以上已经把octopress博客系统和第一篇博客生成了，接下来要把生成的博客系统和博客部署到github pages。</p>
+
+<h3>创建git repository</h3>
+
+<p><a href="https://github.com/">https://github.com/</a> Create a new repo
+输入名称 username.github.com，注意username改为你的username，不能省略后面的github.com。
+eg. caiqinghua.github.com</p>
+
+<h3>设置刚刚创建的repository路径到本地</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake setup_github_pages
+</span><span class='line'>Enter the read/write url for your repository
+</span><span class='line'>(For example, 'git@github.com:your_username/your_username.github.com)
+</span><span class='line'>Repository url: </span></code></pre></td></tr></table></div></figure>
+
+
+<p>请输入：<code>git@github.com:yourname/yourname.github.com.git</code> (将yourname替换成你的github登录名)</p>
+
+<p><strong>注意</strong>:这一步不要输入提示中提示的以io结束的地址。</p>
+
+<h3>部署你的博客</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>一面的deploy只是把_deploy目录上传到你的repo的master分支，即只是把生成的静态博客站点上传到github pages了。下面还需要把生成这个静态站点工具上传到repo的source分支</p>
+
+<h3>提交的source目录</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /d D:\ruby\octopress
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m "My octopress blog source code"
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<p>到github.com查看你上面新建的repository，会多一个source分支，记载所有的源文件。</p>
+
+<h3>安装过程中遇到的问题</h3>
+
+<ol>
+<li>bundle install 过程中Installing rdiscount (2.0.7.3) 安装失败</li>
+</ol>
+
+
+<p>猜测原因：DevKit问题
+把Ruby200中的DevKit删除，把path中c:\Ruby200\devkit 删除
+重新执行bundle install
+成功了</p>
+
+<ol>
+<li>rake install 错误</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>d:\ruby\octopress&gt;rake install
+</span><span class='line'>rake aborted!
+</span><span class='line'>You have already activated rake 10.1.0, but your Gemfile requires rake 0.9.2.2.
+</span><span class='line'>Using bundle exec may solve this.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>解决办法：
+修改octopress/Gemfiles
+gem &lsquo;rake&rsquo;, &lsquo;~> 0.9&rsquo;
+改为
+gem &lsquo;rake&rsquo;
+再次rake install成功了</p>
+
+<ol>
+<li>rake setup_github_pages &lsquo;hellip&rsquo; 不是内部或外部命令</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>d:\ruby\octopress&gt;rake setup_github_pages
+</span><span class='line'>Enter the read/write url for your repository
+</span><span class='line'>(For example, 'git@github.com:your_username/your_username.github.io)
+</span><span class='line'>           or 'https://github.com/your_username/your_username.github.io')
+</span><span class='line'>Repository url: git@github.com:caiqinghua/caiqinghua.github.io
+</span><span class='line'>Added remote git@github.com:caiqinghua/caiqinghua.github.io as origin
+</span><span class='line'>Set origin as default remote
+</span><span class='line'>Master branch renamed to 'source' for committing your blog source files
+</span><span class='line'>rm -rf _deploy
+</span><span class='line'>mkdir _deploy
+</span><span class='line'>cd _deploy
+</span><span class='line'>Initialized empty Git repository in d:/ruby/octopress/_deploy/.git/
+</span><span class='line'>'My Octopress Page is coming soon
+</span><span class='line'>'hellip' 不是内部或外部命令，也不是可运行的程序
+</span><span class='line'>或批处理文件。
+</span><span class='line'>[master (root-commit) 7e72dcf] Octopress init
+</span><span class='line'>1 file changed, 0 insertions(+), 0 deletions(-)
+</span><span class='line'>create mode 100644 index.html
+</span><span class='line'>cd -
+</span><span class='line'>
+</span><span class='line'>---
+</span><span class='line'>## Now you can deploy to git@github.com:caiqinghua/caiqinghua.github.io with `ra
+</span><span class='line'>ke deploy` ##</span></code></pre></td></tr></table></div></figure>
+
+
+<p>google: &lsquo;hellip&rsquo; 不是内部或外部命令，也不是可运行的程序
+<a href="http://pythonee.github.io/blog/2012/08/10/how-to-octpress/">http://pythonee.github.io/blog/2012/08/10/how-to-octpress/</a>
+这个错误无关痛痒，无需解决。</p>
+
+<ol>
+<li>rake deploy</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>## Pushing generated _deploy website
+</span><span class='line'>Permission denied (publickey).
+</span><span class='line'>fatal: Could not read from remote repository.
+</span><span class='line'>
+</span><span class='line'>Please make sure you have the correct access rights
+</span><span class='line'>and the repository exists.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>解决办法：设置ssh，前面已经提及</p>
+
+<ol>
+<li>再次rake deploy，发生以下错误</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>## Pushing generated _deploy website
+</span><span class='line'>Enter passphrase for key '/c/Users/Lin/.ssh/id_rsa':
+</span><span class='line'>ERROR: Repository not found.
+</span><span class='line'>fatal: Could not read from remote repository.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>问题原因：rake setup_github_pages 中 git@github.com:caiqinghua/caiqinghua.github.io设置错误，应该设置为 git@github.com:caiqinghua/caiqinghua.github.com.git
+解决办法：
+查看octopress_deploy.git\config</p>
+
+<p>发现url错误，修改后，重试，部署完成</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[remote "origin"]
+</span><span class='line'>     url = git@github.com:caiqinghua/caiqinghua.github.io</span></code></pre></td></tr></table></div></figure>
+
+
+<p>修改为</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[remote "origin"]
+</span><span class='line'>     url = git@github.com:caiqinghua/caiqinghua.github.com.git</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>注意</strong>: octopress.git\config 中的url也生成错了。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[remote "origin"]
+</span><span class='line'>     url = git@github.com:caiqinghua/caiqinghua.github.io</span></code></pre></td></tr></table></div></figure>
+
+
+<p>   <br/>
+应该修改为</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[remote "origin"]
+</span><span class='line'>     url = git@github.com:caiqinghua/caiqinghua.github.com.git
+</span><span class='line'>     fetch = +refs/heads/*:refs/remotes/origin/*</span></code></pre></td></tr></table></div></figure>
+
+
+<p>重新执行rake gen_deploy执行成功了</p>
+
+<p>立即访问 caiqinghua.github.com，提示404 页面未找到错误
+10分钟后访问，可以看到本地预览的博客了。
+到此部署octopress到github pages总算完成了。</p>
+
+<h3>后记</h3>
+
+<p>octopress中用markdown格式撰写博文，关于markdown语法，如何撰写博客，如何个性化设置博客，且听下文分解。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[说说我用过的博客系统]]></title>

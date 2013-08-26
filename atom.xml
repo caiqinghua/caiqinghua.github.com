@@ -4,7 +4,7 @@
   <title><![CDATA[技术分享控-蔡清华]]></title>
   <link href="http://caiqinghua.github.com/atom.xml" rel="self"/>
   <link href="http://caiqinghua.github.com/"/>
-  <updated>2013-08-27T00:16:30+08:00</updated>
+  <updated>2013-08-27T07:11:20+08:00</updated>
   <id>http://caiqinghua.github.com/</id>
   <author>
     <name><![CDATA[蔡清华 caiqinghua@126.com]]></name>
@@ -20,7 +20,7 @@
     <id>http://caiqinghua.github.com/blog/2013/08/26/deploy-octopress-to-github-pages</id>
     <content type="html"><![CDATA[<h2>引子</h2>
 
-<p>上一篇博客已经说了为什么要搭建这个博客系统，本文不在啰嗦，单刀直入，说以下主题。
+<p>上一篇博客已经说了为什么要搭建这个博客系统，本文不再啰嗦，单刀直入，说以下主题。
 1. Octopress是什么
 2. Github Page是什么
 3. 部署Octopress到Github Pages的过程
@@ -159,6 +159,11 @@ eg. caiqinghua.github.com</p>
 
 <p><strong>注意</strong>:这一步不要输入提示中提示的以io结束的地址。</p>
 
+<h3>设置SSH</h3>
+
+<p>设置步骤自行google解决
+也可以不设置SSH,每次输入githib密码上传，请自行google解决</p>
+
 <h3>部署你的博客</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -185,20 +190,14 @@ eg. caiqinghua.github.com</p>
 
 <h3>安装过程中遇到的问题</h3>
 
-<ol>
-<li>bundle install 过程中Installing rdiscount (2.0.7.3) 安装失败</li>
-</ol>
-
+<h4>1. bundle install 过程中Installing rdiscount (2.0.7.3) 安装失败</h4>
 
 <p>猜测原因：DevKit问题
 把Ruby200中的DevKit删除，把path中c:\Ruby200\devkit 删除
 重新执行bundle install
 成功了</p>
 
-<ol>
-<li>rake install 错误</li>
-</ol>
-
+<h4>2. rake install 错误</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -217,10 +216,7 @@ gem &lsquo;rake&rsquo;, &lsquo;~> 0.9&rsquo;
 gem &lsquo;rake&rsquo;
 再次rake install成功了</p>
 
-<ol>
-<li>rake setup_github_pages &lsquo;hellip&rsquo; 不是内部或外部命令</li>
-</ol>
-
+<h4>　3. rake setup_github_pages &lsquo;hellip&rsquo; 不是内部或外部命令</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -274,10 +270,7 @@ gem &lsquo;rake&rsquo;
 <a href="http://pythonee.github.io/blog/2012/08/10/how-to-octpress/">http://pythonee.github.io/blog/2012/08/10/how-to-octpress/</a>
 这个错误无关痛痒，无需解决。</p>
 
-<ol>
-<li>rake deploy</li>
-</ol>
-
+<h4>　4. rake deploy</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -295,10 +288,7 @@ gem &lsquo;rake&rsquo;
 
 <p>解决办法：设置ssh，前面已经提及</p>
 
-<ol>
-<li>再次rake deploy，发生以下错误</li>
-</ol>
-
+<h4>　5. 再次rake deploy，发生以下错误</h4>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

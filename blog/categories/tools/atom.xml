@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: tools | 技术分享控-蔡清华]]></title>
-  <link href="http://caiqinghua.github.io/blog/categories/tools/atom.xml" rel="self"/>
-  <link href="http://caiqinghua.github.io/"/>
-  <updated>2013-08-26T21:39:43+08:00</updated>
-  <id>http://caiqinghua.github.io/</id>
+  <link href="http://caiqinghua.github.com/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://caiqinghua.github.com/"/>
+  <updated>2013-08-26T21:45:16+08:00</updated>
+  <id>http://caiqinghua.github.com/</id>
   <author>
     <name><![CDATA[蔡清华 caiqinghua@126.com]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[说说我用过的博客系统]]></title>
-    <link href="http://caiqinghua.github.io/blog/2013/08/25/my-first-octopress-blog-about-blog-system-i-have-used/"/>
+    <link href="http://caiqinghua.github.com/blog/2013/08/25/my-first-octopress-blog-about-blog-system-i-have-used/"/>
     <updated>2013-08-25T15:24:00+08:00</updated>
-    <id>http://caiqinghua.github.io/blog/2013/08/25/my-first-octopress-blog-about-blog-system-i-have-used</id>
+    <id>http://caiqinghua.github.com/blog/2013/08/25/my-first-octopress-blog-about-blog-system-i-have-used</id>
     <content type="html"><![CDATA[<h2>引子</h2>
 
 <p>昨天晚上，oschina.net博客访问不了，想起了堆栈中一直放着的Github Blog，于是昨晚把搭建Github Blog排在了今天的计划中。</p>

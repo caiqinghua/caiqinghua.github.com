@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to Add Comments or Copyright to the Ftp Command File En - 分享控</title>
+  <meta name="author" content="蔡清华 caiqinghua@126.com">
+
+  
+  <meta name="description" content="Because of I write a ftp commond file to transfer the file to the ftp server automatically. It is works. Before i commit it the svn repo, i want to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://caiqinghua.github.com/blog/2013/08/27/how-to-add-comments-or-copyright-to-the-ftp-command-file-en">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="分享控" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">分享控</a></h1>
+  
+    <h2>分享让我们拥有更多 改进让我们效率更高</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:caiqinghua.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">首页</a></li>
+  <li><a href="/blog/archives">博客</a></li>
+  <li><a href="/aboutme">About Me</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How to Add Comments or Copyright to the Ftp Command File En</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-27T21:58:00+08:00" pubdate data-updated="true">Aug 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Because of</h2>
+
+<p>I write a ftp commond file to transfer the file to the ftp server automatically. It is works. Before i commit it the svn repo, i want to add the copyright comments in the header of the file. I add the following comments:
+@rem/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>
+@rem copyright @ xxx technology.
+@rem author: <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x63;&#97;&#x69;&#x71;&#105;&#110;&#103;&#104;&#x75;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#99;&#97;&#105;&#x71;&#105;&#110;&#x67;&#104;&#x75;&#97;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a>
+@rem modify list:
+@rem 2013-08-27 create the file
+@rem </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/</p>
+
+<p>And it doesn&rsquo;t work.</p>
+
+<h2>find the reason</h2>
+
+<p>I post a ask to a ask-answer community. Till today, i get a lots of answer and i know the reason.</p>
+
+<h2>how to transfer the file to ftp server automatically and add comments</h2>
+
+<h3>how to transfer the file to ftp server automatically</h3>
+
+<p>I don&rsquo;t install the english windows in my computer, so you will see some chinese in the echo of the command &ldquo;ftp /?&rdquo;.</p>
+
+<p>ftp command in the windows dos command.
+d:\ruby\octopress>ftp /?</p>
+
+<p>将文件传送到运行 FTP 服务器服务(经常称为后台程序)的计算机以及将文件从该计算机
+传出。可以交互使用 Ftp。</p>
+
+<p>FTP [-v] [-d] [-i] [-n] [-g] [-s:filename] [-a] [-A] [-x:sendbuffer] [-r:recvbuf
+fer] [-b:asyncbuffers] [-w:windowsize] [host]</p>
+
+<p>  -v              禁止显示远程服务器响应。
+  -n              禁止在初始连接时自动登录。
+  -i              关闭多文件传输过程中的</p>
+
+<pre><code>              交互式提示。
+</code></pre>
+
+<p>  -d              启用调试。
+  -g              禁用文件名通配(请参阅 GLOB 命令)。
+  -s:filename     指定包含 FTP 命令的文本文件；命令</p>
+
+<pre><code>              在 FTP 启动后自动运行。
+</code></pre>
+
+<p>  -a              在绑字数据连接时使用所有本地接口。
+  -A              匿名登录。
+  -x:send sockbuf 覆盖默认的 SO_SNDBUF 大小 8192。
+  -r:recv sockbuf 覆盖默认的 SO_RCVBUF 大小 8192。
+  -b:async count  覆盖默认的异步计数 3
+  -w:windowsize   覆盖默认的传输缓冲区大小 65535。
+  host            指定主机名称或要连接到的远程主机</p>
+
+<pre><code>              的 IP 地址。
+</code></pre>
+
+<p>注意:
+  &ndash; mget 和 mput 命令将 y/n/q 视为 yes/no/quit。
+  &ndash; 使用 Ctrl-C 中止命令。</p>
+
+<p>d:\ruby\octopress></p>
+
+<p>As you can see, you can use the ftp -s:filename to transfer file to ftp server.</p>
+
+<p>I create a file that named ftpcmd.txt
+And write the following content to the file.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>open 1.1.1.1
+</span><span class='line'>admin
+</span><span class='line'>admin
+</span><span class='line'>ftp a.markdown a.markdown
+</span><span class='line'>by</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you execute the commond &ldquo;ftp -s:ftpcmd.txt&rdquo; in the dos cmd env, it will transfer the a.markdown to the ftp server 1.1.1.1.</p>
+
+<h3>how add the comments in the header of the ftpcommand file</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>!@rem /**********************************
+</span><span class='line'>!@rem copyright @ xxx technology.
+</span><span class='line'>!@rem author: caiqinghua@gmail.com
+</span><span class='line'>!@rem modify list:
+</span><span class='line'>!@rem 2013-08-27 create the file
+</span><span class='line'>!@rem **********************************/
+</span><span class='line'>
+</span><span class='line'>open 1.1.1.1
+</span><span class='line'>admin
+</span><span class='line'>admin
+</span><span class='line'>ftp a.markdown a.markdown
+</span><span class='line'>by</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You should add the &ldquo;!&rdquo; to the begin of the comment line.
+And you should add a space character between !@rem and the comment content.</p>
+
+<h2>Conclusions</h2>
+
+<p>Linux Unix Os: use the !# to the begin of the comment.
+Windows:       use the !@rem to  the begin of the comment.
+what is &ldquo;!&rdquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ftp&gt; ! help
+</span><span class='line'>ftp&gt; help !
+</span><span class='line'>!               转义到 shell
+</span><span class='line'>ftp&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>!go to shell execute this command, so we can use the shell or dos comments syntax.
+@ tell the shell don&rsquo;t echo in this command.</p>
+
+<p>More information about ftp transfer file to the server or add comments, please google.</p>
+
+<h2>Chinese version of this post.</h2>
+
+<p>I will post the chinese version later.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">蔡清华 caiqinghua@126.com</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-27T21:58:00+08:00" pubdate data-updated="true">Aug 27<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dos/'>dos</a>, <a class='category' href='/blog/categories/windows/'>windows</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://caiqinghua.github.com/blog/2013/08/27/how-to-add-comments-or-copyright-to-the-ftp-command-file-en/" data-via="" data-counturl="http://caiqinghua.github.com/blog/2013/08/27/how-to-add-comments-or-copyright-to-the-ftp-command-file-en/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/08/27/how-to-write-and-post-octopress-blog-to-github-pages/" title="Previous Post: how to write and post octopress blog to github pages">&laquo; how to write and post octopress blog to github pages</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/27/how-to-add-comments-or-copyright-to-the-ftp-command-file-en/">How to Add Comments or Copyright to the Ftp Command File En</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/27/how-to-write-and-post-octopress-blog-to-github-pages/">How to Write and Post Octopress Blog to Github Pages</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/27/set-octopress-blog/">设置OCTOPRESS博客</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/26/deploy-octopress-to-github-pages/">在github Pages上部署octopress搭建个人博客系统</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/25/my-first-octopress-blog-about-blog-system-i-have-used/">说说我用过的博客系统</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - 蔡清华 caiqinghua@126.com -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

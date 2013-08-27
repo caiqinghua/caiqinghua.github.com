@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[技术分享控-蔡清华]]></title>
+  <title><![CDATA[分享控]]></title>
   <link href="http://caiqinghua.github.com/atom.xml" rel="self"/>
   <link href="http://caiqinghua.github.com/"/>
-  <updated>2013-08-27T07:11:20+08:00</updated>
+  <updated>2013-08-27T21:49:14+08:00</updated>
   <id>http://caiqinghua.github.com/</id>
   <author>
     <name><![CDATA[蔡清华 caiqinghua@126.com]]></name>
@@ -12,6 +12,121 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[how to write and post octopress blog to github pages]]></title>
+    <link href="http://caiqinghua.github.com/blog/2013/08/27/how-to-write-and-post-octopress-blog-to-github-pages/"/>
+    <updated>2013-08-27T20:56:00+08:00</updated>
+    <id>http://caiqinghua.github.com/blog/2013/08/27/how-to-write-and-post-octopress-blog-to-github-pages</id>
+    <content type="html"><![CDATA[<h2>New post</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["how to write and post octopress blog to github pages"]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It will generate a post file. \octopress\source_posts\2013-08-27-how-to-write-and-post-octopress-blog-to-github-pages.markdown</p>
+
+<h2>Edit the post file</h2>
+
+<ol>
+<li>use a text edit tool open the markdown file: \octopress\source_posts\2013-08-27-how-to-write-and-post-octopress-blog-to-github-pages.markdown.</li>
+<li>edit it by markdown syntax.</li>
+<li><a href="https://github.com/caiqinghua/caiqinghua.github.com/tree/source/source_posts\2013-08-27-how-to-write-and-post-octopress-blog-to-github-pages.markdown">Open the markdown file of this blog,</a>, you will know the markdown syntax.</li>
+<li>For more infomation
+Markdown is available at <a href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a>
+and <a href="http://wenku.baidu.com/view/5e737dec102de2bd96058843.html">there is a simple markdown syntax in the wenku.baidu.com</a></li>
+</ol>
+
+
+<h2>Preview your blog in local</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>navigate to <a href="http://localhost:4000/">http://localhost:4000/</a></p>
+
+<h2>Send the post to github pages</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake gen_deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you can also use the following cmd.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[设置OCTOPRESS博客]]></title>
+    <link href="http://caiqinghua.github.com/blog/2013/08/27/set-octopress-blog/"/>
+    <updated>2013-08-27T20:22:00+08:00</updated>
+    <id>http://caiqinghua.github.com/blog/2013/08/27/set-octopress-blog</id>
+    <content type="html"><![CDATA[<h2>引言</h2>
+
+<p>可以登录&lt;caiqinghua.github.com>查看设置效果
+<a href="https://github.com/caiqinghua/caiqinghua.github.com/blob/source/_config.yml">查看本博客的配置文件</a></p>
+
+<h2>设置博客标题</h2>
+
+<p>打开octopress/_config.yml文件，设置如下内容。
+url: <a href="http://caiqinghua.github.com">http://caiqinghua.github.com</a> <em>设置后没效果，还是会跳转到.io</em>
+title: 分享控 <em>整个博客的标题，一般设置为xxx的个人博客</em>
+subtitle: 分享让我们拥有更多 改进让我们效率更高 <em>副标题</em>
+author: 蔡清华 <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x63;&#x61;&#x69;&#x71;&#x69;&#110;&#x67;&#104;&#117;&#x61;&#x40;&#x31;&#50;&#54;&#46;&#x63;&#111;&#x6d;">&#99;&#97;&#105;&#x71;&#105;&#x6e;&#x67;&#x68;&#x75;&#x61;&#x40;&#x31;&#50;&#54;&#x2e;&#x63;&#111;&#x6d;</a> <em>显示在页脚</em>
+simple_search: <a href="http://google.com/search">http://google.com/search</a> <em>默认搜索引擎</em>
+description: 分享一切 share everything</p>
+
+<h2>设置首页</h2>
+
+<h2>打开octopress/source/index.html文件，设置如下内容。</h2>
+
+<p>layout: default
+description: &ldquo;蔡清华的技术博客&rdquo;</p>
+
+<h2>keywords: web app, phone app, php, ruby, python, meteor, git, github, dos, bat, yii, ruby on rails, bootstrap, bsp(board support package), makefile, vxworks, linux, cooking</h2>
+
+<h2>设置菜单栏</h2>
+
+<p>打开octopress\source_includes\custom\navigation.html
+按如下设置增加About Me菜单</p>
+
+<ul class="main-navigation">
+  <li><a href="http://caiqinghua.github.com/">首页</a></li>
+  <li><a href="http://caiqinghua.github.com/blog/archives">博客</a></li>
+  <li><a href="http://caiqinghua.github.com/aboutme">About Me</a></li>
+</ul>
+
+
+<h2>设置不跳转</h2>
+
+<p>caiqinghua.github.com会自动跳转到caiqinghua.github.io
+如何设置为不跳转，还木有找到答案。</p>
+
+<h2>设置侧边栏</h2>
+
+<h3>增加新浪微博</h3>
+
+<h3>添加豆瓣</h3>
+
+<h3>添加标签云</h3>
+
+<h3>添加其他个性化服务</h3>
+
+<p>侧边栏设置还未实践，等实践后补充。</p>
+
+<h2>增加页面</h2>
+
+<p>待补充</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在github pages上部署octopress搭建个人博客系统]]></title>
@@ -78,12 +193,12 @@ Ruby的安装也是一路next就可以，不过记得勾选“Add Ruby executabl
 DevKit下载下来的是一个自压缩文件，我们将其解压到D:/DevKit，有两点需要注意：</p>
 
 <ol>
-<li>解压目录中没有有中文和空格；</li>
-<li>必须先安装Ruby，而且Ruby需要是RubyInstallser安装。</li>
+<li>解压目录不能含空格或中文；</li>
+<li>必须先安装Ruby。</li>
 </ol>
 
 
-<p>解压DevKit后，在命令行输入以下命令来进行安装：</p>
+<p>解压DevKit后，在命令行输入以下命令安装DevKit：</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

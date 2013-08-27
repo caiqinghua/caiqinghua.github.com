@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tool | 分享控]]></title>
   <link href="http://caiqinghua.github.com/blog/categories/tool/atom.xml" rel="self"/>
   <link href="http://caiqinghua.github.com/"/>
-  <updated>2013-08-27T21:49:16+08:00</updated>
+  <updated>2013-08-27T22:03:18+08:00</updated>
   <id>http://caiqinghua.github.com/</id>
   <author>
     <name><![CDATA[蔡清华 caiqinghua@126.com]]></name>
@@ -28,7 +28,8 @@ It will generate a post file. \octopress\source_posts\2013-08-27-how-to-write-an
 <h2>Edit the post file</h2>
 
 <ol>
-<li>use a text edit tool open the markdown file: \octopress\source_posts\2013-08-27-how-to-write-and-post-octopress-blog-to-github-pages.markdown.</li>
+<li>use a text edit tool open the markdown file: \octopress\source_posts\2013-08-27-how-to-write-and-post-octopress-blog-to-github-pages.markdown.
+I recommend using the Sublime Text. I like it. I think you will like it.</li>
 <li>edit it by markdown syntax.</li>
 <li><a href="https://github.com/caiqinghua/caiqinghua.github.com/tree/source/source_posts\2013-08-27-how-to-write-and-post-octopress-blog-to-github-pages.markdown">Open the markdown file of this blog,</a>, you will know the markdown syntax.</li>
 <li>For more infomation
@@ -75,7 +76,7 @@ rake deploy
 url: <a href="http://caiqinghua.github.com">http://caiqinghua.github.com</a> <em>设置后没效果，还是会跳转到.io</em>
 title: 分享控 <em>整个博客的标题，一般设置为xxx的个人博客</em>
 subtitle: 分享让我们拥有更多 改进让我们效率更高 <em>副标题</em>
-author: 蔡清华 <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#99;&#x61;&#x69;&#113;&#x69;&#x6e;&#x67;&#104;&#117;&#x61;&#64;&#49;&#50;&#x36;&#x2e;&#99;&#x6f;&#x6d;">&#x63;&#97;&#105;&#113;&#x69;&#x6e;&#103;&#x68;&#x75;&#x61;&#x40;&#49;&#50;&#x36;&#46;&#x63;&#x6f;&#x6d;</a> <em>显示在页脚</em>
+author: 蔡清华 <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#99;&#97;&#105;&#x71;&#105;&#110;&#x67;&#104;&#117;&#x61;&#64;&#x31;&#x32;&#54;&#46;&#x63;&#x6f;&#x6d;">&#x63;&#97;&#x69;&#x71;&#x69;&#110;&#x67;&#x68;&#x75;&#97;&#64;&#49;&#x32;&#54;&#46;&#x63;&#x6f;&#x6d;</a> <em>显示在页脚</em>
 simple_search: <a href="http://google.com/search">http://google.com/search</a> <em>默认搜索引擎</em>
 description: 分享一切 share everything</p>
 
@@ -94,9 +95,9 @@ description: &ldquo;蔡清华的技术博客&rdquo;</p>
 按如下设置增加About Me菜单</p>
 
 <ul class="main-navigation">
-  <li><a href="{{ root_url }}/">首页</a></li>
-  <li><a href="{{ root_url }}/blog/archives">博客</a></li>
-  <li><a href="{{ root_url }}/aboutme">About Me</a></li>
+  <li><a href="/">首页</a></li>
+  <li><a href="/blog/archives">博客</a></li>
+  <li><a href="/aboutme">About Me</a></li>
 </ul>
 
 

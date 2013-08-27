@@ -58,10 +58,10 @@ Ruby的安装也是一路next就可以，不过记得勾选“Add Ruby executabl
 安装DevKit
 DevKit下载下来的是一个自压缩文件，我们将其解压到D:/DevKit，有两点需要注意：
 
-1. 解压目录中没有有中文和空格；
-2. 必须先安装Ruby，而且Ruby需要是RubyInstallser安装。
+1. 解压目录不能含空格或中文；
+2. 必须先安装Ruby。
 
-解压DevKit后，在命令行输入以下命令来进行安装：
+解压DevKit后，在命令行输入以下命令安装DevKit：
 
 ```
 cd /d D:\DevKit

@@ -4,7 +4,7 @@ title: "how to write and post octopress blog to github pages"
 date: 2013-08-27 20:56
 comments: true
 categories: [tool]
-tag: [octopress]
+tags: [octopress]
 ---
 
 ## New post
@@ -16,6 +16,7 @@ It will generate a post file. \octopress\source\_posts\2013-08-27-how-to-write-a
 ## Edit the post file
 
 1. use a text edit tool open the markdown file: \octopress\source\_posts\2013-08-27-how-to-write-and-post-octopress-blog-to-github-pages.markdown.
+I recommend using the Sublime Text. I like it. I think you will like it.
 2. edit it by markdown syntax.
 3. [Open the markdown file of this blog,](https://github.com/caiqinghua/caiqinghua.github.com/tree/source/source\_posts\2013-08-27-how-to-write-and-post-octopress-blog-to-github-pages.markdown), you will know the markdown syntax.
 4. For more infomation

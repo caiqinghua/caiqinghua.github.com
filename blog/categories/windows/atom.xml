@@ -4,7 +4,7 @@
   <title><![CDATA[Category: windows | 分享控]]></title>
   <link href="http://caiqinghua.github.com/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://caiqinghua.github.com/"/>
-  <updated>2013-08-27T23:04:14+08:00</updated>
+  <updated>2013-08-27T23:06:46+08:00</updated>
   <id>http://caiqinghua.github.com/</id>
   <author>
     <name><![CDATA[蔡清华 caiqinghua@126.com]]></name>
@@ -23,7 +23,7 @@
 <p>I write a ftp commond file to transfer the file to the ftp server automatically. It is works. Before i commit it the svn repo, i want to add the copyright comments in the header of the file. I add the following comments:
 @rem/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>
 @rem copyright @ xxx technology.
-@rem author: <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x63;&#x61;&#105;&#x71;&#105;&#110;&#103;&#104;&#117;&#97;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#x63;&#x61;&#105;&#x71;&#x69;&#x6e;&#103;&#x68;&#x75;&#97;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a>
+@rem author: <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x63;&#x61;&#105;&#x71;&#x69;&#x6e;&#x67;&#x68;&#117;&#x61;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#x63;&#97;&#105;&#113;&#105;&#x6e;&#103;&#x68;&#117;&#x61;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a>
 @rem modify list:
 @rem 2013-08-27 create the file
 @rem </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/</p>
@@ -41,6 +41,7 @@
 <p>I don&rsquo;t install the english windows in my computer, so you will see some chinese in the echo of the command &ldquo;ftp /?&rdquo;.</p>
 
 <p>ftp command in the windows dos command.
+```
 d:\ruby\octopress>ftp /?</p>
 
 <p>将文件传送到运行 FTP 服务器服务(经常称为后台程序)的计算机以及将文件从该计算机
@@ -78,7 +79,8 @@ fer] [-b:asyncbuffers] [-w:windowsize] [host]</p>
   &ndash; mget 和 mput 命令将 y/n/q 视为 yes/no/quit。
   &ndash; 使用 Ctrl-C 中止命令。</p>
 
-<p>d:\ruby\octopress></p>
+<p>d:\ruby\octopress>
+```</p>
 
 <p>As you can see, you can use the ftp -s:filename to transfer file to ftp server.</p>
 
@@ -99,7 +101,7 @@ by
 <p>```
 !@rem /<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>
 !@rem copyright @ xxx technology.
-!@rem author: <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#99;&#x61;&#105;&#113;&#x69;&#x6e;&#x67;&#104;&#x75;&#x61;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;">&#x63;&#x61;&#x69;&#113;&#105;&#x6e;&#103;&#x68;&#x75;&#97;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a>
+!@rem author: <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#99;&#97;&#x69;&#113;&#x69;&#110;&#103;&#x68;&#x75;&#97;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x63;&#x61;&#105;&#113;&#x69;&#x6e;&#x67;&#x68;&#117;&#97;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a>
 !@rem modify list:
 !@rem 2013-08-27 create the file
 !@rem </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/</p>

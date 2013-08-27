@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "How to Add Comments or Copyright to the Ftp Command File En"
+title: "How to Add Comments or Copyright to the Ftp Command File"
 date: 2013-08-27 21:58
 comments: true
 categories: [windows, dos]
-tags:[windows, dos, ftp, comment]
+tags: [windows, dos, ftp, comment]
 ---
 ## Because of
 I write a ftp commond file to transfer the file to the ftp server automatically. It is works. Before i commit it the svn repo, i want to add the copyright comments in the header of the file. I add the following comments:
@@ -26,6 +26,7 @@ I post a ask to a ask-answer community. Till today, i get a lots of answer and i
 I don't install the english windows in my computer, so you will see some chinese in the echo of the command "ftp /?".
 
 ftp command in the windows dos command. 
+```
 d:\ruby\octopress>ftp /?
 
 将文件传送到运行 FTP 服务器服务(经常称为后台程序)的计算机以及将文件从该计算机
@@ -56,6 +57,7 @@ fer] [-b:asyncbuffers] [-w:windowsize] [host]
   - 使用 Ctrl-C 中止命令。
 
 d:\ruby\octopress>
+```
 
 As you can see, you can use the ftp -s:filename to transfer file to ftp server.
 

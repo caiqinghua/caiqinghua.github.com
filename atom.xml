@@ -4,7 +4,7 @@
   <title><![CDATA[shareverything 分享控]]></title>
   <link href="http://caiqinghua.github.com/atom.xml" rel="self"/>
   <link href="http://caiqinghua.github.com/"/>
-  <updated>2013-08-29T23:52:39+08:00</updated>
+  <updated>2013-08-29T23:58:32+08:00</updated>
   <id>http://caiqinghua.github.com/</id>
   <author>
     <name><![CDATA[蔡清华 caiqinghua@126.com]]></name>
@@ -39,22 +39,44 @@ kvm: from linux kernal and open source</p>
 
 <h2>Paper</h2>
 
-<p><a href="http://grid.hust.edu.cn/973/read.php?wid=103&amp;page=5">http://grid.hust.edu.cn/973/read.php?wid=103&amp;page=5</a>
-1. hybrid scheduling
-google.com or baidu.com search keyword: hybrid scheduling chuliang weng
-2. adaptive scheduling
-you also can find it from the internet.
-google.com or baidu.com search keyword: adaptive scheduling HDPC chuliang weng
-3. about security, i dont remember the paper name.</p>
+<p>You can find the paper from internet.</p>
+
+<p><a href="http://grid.hust.edu.cn/973/read.php?wid=103&amp;page=5">http://grid.hust.edu.cn/973/read.php?wid=103&amp;page=5</a></p>
+
+<ul>
+<li>hybrid scheduling</li>
+</ul>
+
+
+<p>google.com or baidu.com search keyword: hybrid scheduling chuliang weng</p>
+
+<ul>
+<li>adaptive scheduling</li>
+</ul>
+
+
+<p>google.com or baidu.com search keyword: adaptive scheduling HDPC chuliang weng</p>
+
+<ul>
+<li>about security, i dont remember the paper name.</li>
+</ul>
+
 
 <h2>some key words</h2>
 
-<p>I just record it. You don&rsquo;t need to care it. If you have interest, please google it.
-OSDI
-SOSP
-EuroSys2011
-Asplos2013
-IEEE Security &amp; Private</p>
+<p>I just record it. You don&rsquo;t need to care it. If you have interest, please google it.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>OSDI
+</span><span class='line'>SOSP
+</span><span class='line'>EuroSys2011
+</span><span class='line'>Asplos2013
+</span><span class='line'>IEEE Security & Private</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>The relationship between performance and security</h2>
 
@@ -417,7 +439,7 @@ and <a href="http://wenku.baidu.com/view/5e737dec102de2bd96058843.html">there is
 url: <a href="http://caiqinghua.github.com">http://caiqinghua.github.com</a> <em>设置后没效果，还是会跳转到.io</em>
 title: 分享控 <em>整个博客的标题，一般设置为xxx的个人博客</em>
 subtitle: 分享让我们拥有更多 改进让我们效率更高 <em>副标题</em>
-author: 蔡清华 <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x63;&#97;&#105;&#x71;&#x69;&#110;&#x67;&#104;&#117;&#x61;&#64;&#x31;&#x32;&#x36;&#46;&#x63;&#x6f;&#109;">&#x63;&#x61;&#x69;&#113;&#x69;&#x6e;&#x67;&#x68;&#x75;&#97;&#64;&#x31;&#50;&#x36;&#46;&#x63;&#111;&#109;</a> <em>显示在页脚</em>
+author: 蔡清华 <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#99;&#x61;&#x69;&#x71;&#105;&#x6e;&#103;&#x68;&#x75;&#x61;&#x40;&#49;&#50;&#x36;&#46;&#x63;&#111;&#x6d;">&#99;&#x61;&#105;&#x71;&#x69;&#x6e;&#x67;&#104;&#117;&#x61;&#x40;&#49;&#x32;&#54;&#x2e;&#x63;&#x6f;&#x6d;</a> <em>显示在页脚</em>
 simple_search: <a href="http://google.com/search">http://google.com/search</a> <em>默认搜索引擎</em>
 description: 分享一切 share everything</p>
 

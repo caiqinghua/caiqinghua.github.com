@@ -8,12 +8,14 @@ tags: [windows, dos, ftp, comment]
 ---
 ## Because of
 I write a ftp commond file to transfer the file to the ftp server automatically. It is works. Before i commit it the svn repo, i want to add the copyright comments in the header of the file. I add the following comments:
+```
 @rem/**********************************
 @rem copyright @ xxx technology.
 @rem author: caiqinghua@gmail.com
 @rem modify list:
 @rem 2013-08-27 create the file
 @rem **********************************/
+```
 
 And it doesn't work.
 

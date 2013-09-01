@@ -30,11 +30,13 @@ keywords: web app, phone app, php, ruby, python, meteor, git, github, dos, bat, 
 ## 设置菜单栏
 打开octopress\source\_includes\custom\navigation.html
 按如下设置增加About Me菜单
+```
 <ul class="main-navigation">
   <li><a href="{{ root_url }}/">首页</a></li>
   <li><a href="{{ root_url }}/blog/archives">博客</a></li>
   <li><a href="{{ root_url }}/aboutme">About Me</a></li>
 </ul>
+```
 
 ## 设置不跳转
 caiqinghua.github.com会自动跳转到caiqinghua.github.io

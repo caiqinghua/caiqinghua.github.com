@@ -37,23 +37,23 @@ github pages免费空间，免费流量，每次的博客改动和博客模板�
 ### 准备
 系统：Windows 7
 
-Git：[下载地址](http://msysgit.googlecode.com/files/Git-1.8.1.2-preview20130201.exe)
+Git：[下载地址](https://code.google.com/p/msysgit/downloads/list)
 
-Ruby：[下载地址](http://rubyinstaller.org/news/2013/05/16/rubyinstaller-1-9-3-p429-released/)
+Ruby：[下载地址](http://www.rubyinstaller.org/downloads/)
 **注意**: 部署octopress到github之前我已经安装过ruby on rails，所以我没有安装上面的ruby 1.9.3。
 我安装是[railsinstaller-2.2.1](http://rubyforge.org/frs/download.php/76862/railsinstaller-2.2.1.exe)，详情请查看：<http://railsinstaller.org/en>
 所以下面的安装过程出很多问题也许和此有关，所以还是建议直接安装ruby 1.9.3，不要安装railsinstaller。
 
-DevKit：[下载地址](http://cloud.github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe)
+DevKit：[下载地址](http://rubyforge.org/frs/download.php/76805/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe)
 
 Octopress：git://github.com/imathis/octopress.git
 
 ### 安装软件
 安装Git
-Windows下安装Git很简单，一路next就可以了。
+Windows下安装Git很简单，一路next即可。
 
 安装Ruby
-Ruby的安装也是一路next就可以，不过记得勾选“Add Ruby executables to your PATH”，将Ruby的执行路径加入到环境变量中，如果忘记勾选，也可以手动设置。安装完后可以在命令提示符中输入ruby –version 来确认是否安装成功。
+Ruby的安装也是一路next即可，不过记得勾选“Add Ruby executables to your PATH”，将Ruby的执行路径加入到环境变量中，如果忘记勾选，也可以手动设置。安装完后可以在命令提示符中输入ruby –version 来确认是否安装成功。
 
 安装DevKit
 DevKit下载下来的是一个自压缩文件，我们将其解压到D:/DevKit，有两点需要注意：

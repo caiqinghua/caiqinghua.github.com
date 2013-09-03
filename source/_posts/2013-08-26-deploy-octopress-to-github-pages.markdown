@@ -34,8 +34,9 @@ github pages免费空间，免费流量，每次的博客改动和博客模板�
 
 ## step by step 部署Octopress到Github Pages
 
-### 准备
-系统：Windows 7
+### 准备阶段
+
+操作系统：Windows 7
 
 Git：[下载地址](https://code.google.com/p/msysgit/downloads/list)
 
@@ -46,7 +47,7 @@ Ruby：[下载地址](http://www.rubyinstaller.org/downloads/)
 
 DevKit：[下载地址](http://rubyforge.org/frs/download.php/76805/DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe)
 
-Octopress：git://github.com/imathis/octopress.git
+Octopress：git://github.com/imathis/octopress.git(这里只是列在这里，先不下载，需要用到git下载，方法后面再讲)
 
 ### 安装软件
 安装Git
@@ -64,7 +65,7 @@ DevKit下载下来的是一个自压缩文件，我们将其解压到D:/DevKit�
 解压DevKit后，在命令行输入以下命令安装DevKit：
 
 ```
-cd /d D:\DevKit
+cd /d C:\Ruby193\DevKit
 ruby dk.rb init
 ruby dk.rb install
 ```
@@ -74,12 +75,19 @@ ruby dk.rb install
 cd /d D:\ruby
 git clone git://github.com/imathis/octopress.git octopress
 ```
-下载完成后会在D:\ruby文件中生成octopress文件夹，下面的操作都是基于这个文件夹。
+下载完成后会在D:\ruby文件夹中生成octopress文件夹，下面的讲解中，所有操作都是基于这个文件夹。
 
+### 切换ruby gem安装源
+ruby默认的安装源是 https://rubygems.org/，更换为国内源http://ruby.taobao.org，gem 下载安装包，速度将大大提高。
+```
+gem source -l  #查看当前源
+gem sources -r https://rubygems.org/ #删除默认源
+gem sources -r http://ruby.taobao.org/ #添加国内淘宝源
+```
 ### 安装Octopress依赖项
 ```
 cd octopress
-gem install bundler
+gem install bundler #因为上面切换gem安装源，这里下载速度大大提高。
 bundle install
 ```
 

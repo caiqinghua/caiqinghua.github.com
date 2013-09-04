@@ -57,7 +57,7 @@ Windows下安装Git很简单，一路next即可。
 Ruby的安装也是一路next即可，不过记得勾选“Add Ruby executables to your PATH”，将Ruby的执行路径加入到环境变量中，如果忘记勾选，也可以手动设置。安装完后可以在命令提示符中输入ruby –version 来确认是否安装成功。
 
 安装DevKit
-DevKit下载下来的是一个自压缩文件，我们将其解压到D:/DevKit，有两点需要注意：
+DevKit下载下来的是一个自压缩文件，我们将其解压到C:/DevKit，有两点需要注意：
 
 1. 解压目录不能含空格或中文；
 2. 必须先安装Ruby。
@@ -65,7 +65,7 @@ DevKit下载下来的是一个自压缩文件，我们将其解压到D:/DevKit�
 解压DevKit后，在命令行输入以下命令安装DevKit：
 
 ```
-cd /d C:\Ruby193\DevKit
+cd /d C:\DevKit
 ruby dk.rb init
 ruby dk.rb install
 ```
@@ -82,7 +82,7 @@ ruby默认的安装源是 https://rubygems.org/，更换为国内源http://ruby.
 ```
 gem source -l  #查看当前源
 gem sources -r https://rubygems.org/ #删除默认源
-gem sources -r http://ruby.taobao.org/ #添加国内淘宝源
+gem sources -a http://ruby.taobao.org/ #添加国内淘宝源
 ```
 ### 安装Octopress依赖项
 ```
@@ -129,8 +129,32 @@ Repository url:
 **注意**:这一步不要输入提示中提示的以io结束的地址。
 
 ### 设置SSH
-设置步骤自行google解决
+
 也可以不设置SSH,每次输入githib密码上传，请自行google解决
+设置步骤如下
+```
+$ ssh-keygen -t rsa -C "caiqinghua@126.com"
+Enter passphrase (empty for no passphrase): #直接enter，不要输入密码
+```
+
+打开id_rsa.pub，copy里面的内容
+打开https://github.com/settings/ssh
+点击 Add SSH key，在弹出的页面中 title随便输入一个名字，比如caiqinghua-notebook，key中粘贴刚刚拷贝的内容即可
+
+检查设置是否成功，看到如下输出即可。不用理会but Github does not provide shell access.
+```
+$ ssh -T git@github.com
+Hi caiqinghua! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+### 配置git
+```
+C:\Users\caiqinghua>git config --global user.name "caiqinghua"
+
+C:\Users\caiqinghua>git config --global user.email "caiqinghua@126.com"
+
+C:\Users\caiqinghua>git config -l
+```
 
 ### 部署你的博客
 
@@ -260,3 +284,72 @@ fatal: Could not read from remote repository.
 
 ### 后记
 octopress中用markdown格式撰写博文，关于markdown语法，如何撰写博客，如何个性化设置博客，且听下文分解。
+
+
+###操作记录
+```
+Microsoft Windows [版本 6.1.7601]
+版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+
+C:\Users\caiqinghua>ruby -v
+ruby 2.0.0p247 (2013-06-27) [i386-mingw32]
+
+C:\Users\caiqinghua>cd /d c:\DevKit
+
+c:\DevKit>ruby dk.rb init
+[INFO] found RubyInstaller v2.0.0 at C:/Ruby200
+
+Initialization complete! Please review and modify the auto-generated
+'config.yml' file to ensure it contains the root directories to all
+of the installed Rubies you want enhanced by the DevKit.
+
+c:\DevKit>ruby dk.rb install
+[INFO] Updating convenience notice gem override for 'C:/Ruby200'
+[INFO] Installing 'C:/Ruby200/lib/ruby/site_ruby/devkit.rb'
+
+c:\DevKit>octo
+
+c:\DevKit>cd /d d:\ruby\octopress
+
+d:\ruby\octopress>gem install bundler
+Fetching: bundler-1.3.5.gem (100%)
+Successfully installed bundler-1.3.5
+Parsing documentation for bundler-1.3.5
+Installing ri documentation for bundler-1.3.5
+1 gem installed
+
+d:\ruby\octopress>bundle install
+Fetching source index from http://ruby.taobao.org/
+Installing rake (10.1.0)
+Installing RedCloth (4.2.9)
+Installing chunky_png (1.2.8)
+Installing fast-stemmer (1.0.2)
+Installing classifier (1.3.3)
+Installing fssm (0.2.10)
+Installing sass (3.2.10)
+Installing compass (0.12.2)
+Installing directory_watcher (1.5.1)
+Installing haml (3.1.8)
+Installing kramdown (0.14.2)
+Installing liquid (2.3.0)
+Installing syntax (1.0.0)
+Installing maruku (0.6.1)
+Installing posix-spawn (0.3.6)
+Installing yajl-ruby (1.1.0)
+Installing pygments.rb (0.3.7)
+Installing jekyll (0.12.1)
+Installing rack (1.5.2)
+Installing rack-protection (1.5.0)
+Installing rb-fsevent (0.9.3)
+Installing rdiscount (2.0.7.3)
+Installing rubypants (0.2.0)
+Installing sass-globbing (1.0.0)
+Installing tilt (1.4.1)
+Installing sinatra (1.4.3)
+Installing stringex (1.4.0)
+Using bundler (1.3.5)
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+
+d:\ruby\octopress>
+```
